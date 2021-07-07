@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LobbyFragment">
+
+    <fragment
+        android:id="@+id/LobbyFragment"
+        android:name="com.example.memorygameapplication.ui.LobbyFragment"
+        android:label="@string/fragment_label"
+        tools:layout="@layout/fragment_lobby">
+
+        <action
+            android:id="@+id/action_LobbyFragment_to_GameFragment"
+            app:destination="@id/GameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.example.memorygameapplication.ui.GameFragment"
+        android:label="@string/fragment_label"
+        tools:layout="@layout/fragment_game">
+
+        <action
+            android:id="@+id/action_GameFragment_to_LobbyFragment"
+            app:destination="@id/LobbyFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background"
+    app:cornerRadius="@dimen/button_radius"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/error_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/error_message"
+            app:layout_constraintBottom_toBottomOf="@id/error_message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/error_message"
+            android:src="@drawable/ic_baseline_error_24"
+            android:contentDescription="@string/invalid_move" />
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/error_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/invalid_move"
+            android:textAppearance="@style/fontStyle_small"
+            android:textColor="@color/app_color_light"
+            android:layout_marginLeft="@dimen/basic_margin" />
+
+        <Button
+            android:id="@+id/error_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/error_message"
+            app:cornerRadius="@dimen/button_radius"
+            android:text="@string/ok"
+            app:backgroundTint="@color/app_color_light"
+            android:textColor="@color/app_color"
+            android:textAppearance="@style/fontStyle_small"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
