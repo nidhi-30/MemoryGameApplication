@@ -7,9 +7,6 @@ The development is done Kotlin by using one Activity, Fragments, and Navigation 
 
 The application starts from the lobby page, where user can select the options according to the size of game they want to play. After selection the size option, user will be navigated to the next view where they can play game. singleton class has been created to pass the detail of selected size and show the cards in next view. To display cards according to the different grids, used RecyclerView with layout manager as GridLayout.
 
-![3](https://user-images.githubusercontent.com/60999240/124857483-647f4a80-df7a-11eb-8695-3b880c3d77d2.PNG)
-![4](https://user-images.githubusercontent.com/60999240/124857494-65b07780-df7a-11eb-99f2-a29732283ae1.PNG)
-
 For the list of cards, array of all the images has been taken first and according to size of the selected game, random images has been selected and stored in another array by duplicating them. Also, to check whether the card is faced or whether card is matched, created a class (MemoryCard) and used the list of created class (MemoryCard). The list of MemoryCard has been used to update the cards view according the value.
 
 ![5](https://user-images.githubusercontent.com/60999240/124857492-6517e100-df7a-11eb-8a43-a95857213d06.PNG)
